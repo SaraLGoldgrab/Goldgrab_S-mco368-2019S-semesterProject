@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="FinancialWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Name="currentBalance" Text ="{Binding currentBalance}"/>
+        
+        <TextBlock HorizontalAlignment="Left" Name="currentBalance" Text ="{Binding currentBalance}" Margin="184,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="104"/>
+        <Label Content="Current Balance" HorizontalAlignment="Left" Margin="65,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.114"/>
+        <Border BorderBrush="Black"   BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="180,180,0,0" VerticalAlignment="Top" Width="108"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="517,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Amount Paying" HorizontalAlignment="Left" Margin="426,180,0,0" VerticalAlignment="Top"/>
+        <Button Content="Pay" Background="LawnGreen" HorizontalAlignment="Left" Margin="677,185,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
     </Grid>
 </Window>

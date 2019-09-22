@@ -21,7 +21,7 @@
             <Border BorderBrush="Gray" BorderThickness="1" Margin="0,146,0,247">
                 <TextBlock Name="total" Width="77" HorizontalAlignment="Left" Height="22" Margin="0,0" TextWrapping="Wrap" Text="0.0" VerticalAlignment="Top"/>
             </Border>
-            <Button Name="Buy_btn" Content="Buy" Width="75" Margin="100,146,0,239" Click="Buy_btn_Click"/>
+            <Button x:Name="Buy_btn" Content="Buy" Width="75" Margin="100,146,0,239" />
         </StackPanel>
     </Grid>
 </Window>
