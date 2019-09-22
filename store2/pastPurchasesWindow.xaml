@@ -1,0 +1,27 @@
+﻿<Window x:Class="store2.pastPurchasesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:store2"
+        mc:Ignorable="d"
+        Title="pastPurchasesWindow" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid Name="purchasesInfo" HorizontalAlignment="Left" Height="137" Margin="29,272,0,0" VerticalAlignment="Top" Width="738"
+                   />
+        <DatePicker Name="fromdt" HorizontalAlignment="Left" Margin="104,178,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="todt" HorizontalAlignment="Left" Margin="250,178,0,0" VerticalAlignment="Top"/>
+        <ToggleButton Name="dates" Content="Use Filter by Date" Margin="157,103,509,283" IsChecked="{Binding useDates}"/>
+        <Label Content="From Date: " HorizontalAlignment="Left" Margin="29,176,0,0" VerticalAlignment="Top" />
+        <Label Content="To: " Margin="225,177,542,217"/>
+        <Label Content="Price From: " Margin="437,178,278,217"/>
+        <TextBox Name="PriceFrom"  Margin="519,178,201,217"/>
+        <Label Content="To: " Margin="614,178,145,217"/>
+        <TextBox Name="PriceTo" Margin="652,176,59,215"/>
+        <ToggleButton Name="Prices" Content="Use Filter by Price" Margin="535,103,131,283"/>
+        <Button Content="Show Results" Name="Filter" Margin="29,214,643,152" Background="LightGreen" Click="Filter_Click"/>
+        <Label FontSize="18" Content="Toggle either Date filter, Price filter, both, or neither to view all" HorizontalAlignment="Left" Margin="135,30,0,0" VerticalAlignment="Top" Width="573"/>
+
+    </Grid>
+</Window>

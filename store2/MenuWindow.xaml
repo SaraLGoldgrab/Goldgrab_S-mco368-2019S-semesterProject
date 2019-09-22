@@ -1,0 +1,17 @@
+﻿<Window x:Class="store2.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:store2"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="450" Width="800" Background="Azure">
+    <Grid>
+        <Button Content="View Products" BorderBrush="PaleGreen" HorizontalAlignment="Left" Margin="24,316,0,0" VerticalAlignment="Top" Width="160" Height="77" FontSize="15" FontFamily="Footlight MT Light" Background="WhiteSmoke" Click="Button_Click"/>
+        <Button Name="Purchase_btn" Content="Make a Purchase" BorderBrush="PaleGreen" HorizontalAlignment="Left" Margin="24,120,0,0" VerticalAlignment="Top" Width="160" Height="76" FontSize="15" FontFamily="Footlight MT Light" Background="WhiteSmoke" Click="Purchase_btn_Click"/>
+        <Button Name ="balance_btn" Content="Account Balance and Payment" BorderBrush="PaleGreen" HorizontalAlignment="Left" Margin="24,222,0,0" VerticalAlignment="Top" Width="160" Height="75" FontSize="15" FontFamily="Footlight MT Light" Background="WhiteSmoke" Click="Balance_btn_Click"/>
+        <Button Name="history_btn" Content="View Past Purchases" BorderBrush="PaleGreen" HorizontalAlignment="Left" Margin="24,27,0,0" VerticalAlignment="Top" Width="160" Height="75" FontSize="15" FontFamily="Footlight MT Light" Background="WhiteSmoke" Click="History_btn_Click"/>
+        <Button Name="Exit_btn" Content="Exit" BorderBrush="Salmon" HorizontalAlignment="Left" Margin="604,318,0,0" VerticalAlignment="Top" Width="160" Height="75" FontSize="15" FontFamily="Footlight MT Light" Background="WhiteSmoke" Click="Exit_btn_Click" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="store" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q5P96CR;Initial Catalog=store;Integrated Security=True" SettingsObjectName="store2.Properties.Settings" SettingsPropertyName="storeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.customer" Member="customers">
+    <Type Name="customer">
+      <Column Name="cust_num" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="balance" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="STREET" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CITY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATE" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+      <Column Name="ZIP" Type="System.String" DbType="NChar(9)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cc" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Member="realBalance" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" />
+      <Association Name="customer_purchase" Member="purchases" ThisKey="cust_num" OtherKey="cust_num" Type="purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.item" Member="items">
+    <Type Name="item">
+      <Column Name="item_num" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="item_purchase" Member="purchases" ThisKey="item_num" OtherKey="item_num" Type="purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.purchases" Member="purchases">
+    <Type Name="purchase">
+      <Column Name="purchase_num" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cust_num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="purchase_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="customer_purchase" Member="customer" ThisKey="cust_num" OtherKey="cust_num" Type="customer" IsForeignKey="true" />
+      <Association Name="item_purchase" Member="item" ThisKey="item_num" OtherKey="item_num" Type="item" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
